@@ -24,3 +24,16 @@
 
 ![image](https://user-images.githubusercontent.com/108671823/216042470-a0114901-cade-47c0-b5da-6e5441001ed3.png)
 <h3 align="center"><a href="https://github.com/AntonDegt/HW-ADO.NET/tree/main/Sales">Папка с проектом</a></h3>
+
+
+
+
+# Домашние задание №3
+<h3>Вывести сводные данные по продажам:</h3>
+
+- №п.п - название товара - кол-во проданных шт - сумма продажи
+- фильтр - за "сегодня" 
+
+
+![image](https://user-images.githubusercontent.com/108671823/216074911-41f8dfa2-b787-4247-adf3-7602a215740e.png)
+<h3 align="center"><a href="https://github.com/AntonDegt/HW-ADO.NET/tree/main/Sales">Папка с проектом</a></h3>
