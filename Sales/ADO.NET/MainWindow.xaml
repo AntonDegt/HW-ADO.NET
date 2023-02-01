@@ -25,7 +25,7 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition />
+                <RowDefinition Height="35"/>
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
@@ -63,12 +63,10 @@
         <!-- Daily Statistics -->
         <Grid Grid.Column="0" Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="160"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
@@ -80,27 +78,27 @@
                    HorizontalAlignment="Center"/>
 
             <Label Grid.Column="0" Grid.Row="1"
-                   Content="Продаж (чеков)" />
+                   Content="Самый эффективный менеджер:" />
             <Label Grid.Column="1" Grid.Row="1"
-                   x:Name="StatTotalSales"/>
+                   x:Name="Manager"/>
 
             <Label Grid.Column="0" Grid.Row="2"
-                   Content="Продаж (товаров)" />
+                   Content="Самый эффективный отдел:" />
             <Label Grid.Column="1" Grid.Row="2"
-                   x:Name="StatTotalProducts"/>
+                   x:Name="Departament"/>
 
             <Label Grid.Column="0" Grid.Row="3"
-                   Content="Продаж (грн)" />
+                   Content="Самый популярный товар:" />
             <Label Grid.Column="1" Grid.Row="3"
-                   x:Name="StatTotalMoney"/>
+                   x:Name="Product"/>
         </Grid>
         <!-- End Daily Statistics -->
-        <Grid Grid.Column="1" Grid.Row="0">
+        <Grid Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="35"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Label Grid.Column="0" Grid.Row="0"
@@ -109,7 +107,7 @@
                    HorizontalAlignment="Center"
                    VerticalAlignment="Top"/>
 
-            <Label Grid.Column="0" Grid.Row="1" Name="DepartmentCell" Content=""/>
+            <Label Grid.Column="0" Grid.Row="1" Name="ProductCell" FontSize="12" Padding="4,0,4,0" Content=""/>
         </Grid>
     </Grid>
 </Window>

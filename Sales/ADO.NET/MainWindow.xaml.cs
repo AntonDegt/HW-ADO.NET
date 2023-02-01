@@ -113,21 +113,18 @@ namespace ADO.NET
             {
                 Connection = _connection
             };
-            // В БД информация за 2022 год, поэтому формируем дату с текущим днем и месяцем, но за 2022 год
-            String date = $"2022-{DateTime.Now.Month}-{DateTime.Now.Day}";
 
-            // Всего продаж (чеков)
-            cmd.CommandText = $"SELECT COUNT(*) FROM Sales S WHERE CAST( S.Moment AS DATE ) = '{date}'";
-            StatTotalSales.Content = Convert.ToString(cmd.ExecuteScalar());
+            // Самый эффективный менеджер
+            cmd.CommandText = "SELECT TOP(1) (SELECT CONCAT(Name, ' ', Surname) FROM Managers WHERE ID = ID_manager) FROM (SELECT ID_manager, (SELECT Price FROM Products WHERE ID = ID_product)*Cnt AS Price FROM Sales) temp_table GROUP BY ID_manager ORDER BY SUM(Price) DESC";
+            Manager.Content = Convert.ToString(cmd.ExecuteScalar());
 
-            // Всего продаж (товаров, штук)
-            cmd.CommandText = $"SELECT SUM(S.Cnt) FROM Sales S WHERE CAST( S.Moment AS DATE ) = '{date}'";
-            StatTotalProducts.Content = Convert.ToString(cmd.ExecuteScalar());
+            // Самый эффективный отдел
+            cmd.CommandText = "SELECT TOP(1) (SELECT Name FROM Departments WHERE ID = Id_dep) FROM (SELECT (SELECT Id_main_dep FROM Managers WHERE ID = ID_manager) AS Id_dep, Cnt FROM Sales) temp_table GROUP BY Id_dep ORDER BY SUM(Cnt) DESC";
+            Departament.Content = Convert.ToString(cmd.ExecuteScalar());
 
-            // Всего продаж (грн, деньги)
-            cmd.CommandText = $"SELECT ROUND( SUM( S.Cnt * P.Price ), 2 ) FROM Sales S JOIN Products P ON S.Id_product = P.Id WHERE CAST( S.Moment AS DATE ) = '{date}'";
-            StatTotalMoney.Content = Convert.ToString(cmd.ExecuteScalar());
-            // File.ReadAllText("")
+            // Самый популярный товар
+            cmd.CommandText = "SELECT TOP(1) (SELECT Name FROM Products WHERE ID = ID_product) FROM Sales GROUP BY ID_product ORDER BY SUM(Cnt) DESC";
+            Product.Content = Convert.ToString(cmd.ExecuteScalar());
 
             cmd.Dispose();
         }
@@ -138,14 +135,15 @@ namespace ADO.NET
         /// </summary>
         private void ShowDepartments()
         {
-            using SqlCommand cmd = new SqlCommand("SELECT * FROM Departments", _connection);
+            using SqlCommand cmd = new SqlCommand("SELECT Id, Name, Cnt, Cnt * Price AS All_price FROM (SELECT Id, Name, (SELECT SUM(Cnt) FROM Sales WHERE ID_product = Products.Id AND CAST(Moment AS Date) = CAST(GETDATE() AS Date)) Cnt, Price FROM Products) temp_table WHERE Cnt IS NOT NULL", _connection);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                // Получение элементов записи разными способами
-                Guid id = reader.GetGuid(0); // Через метод (id)
-                String name = (string) reader[1]; // Через индексатов (id)
-                DepartmentCell.Content += $"{id} \n{name} \n";
+                Guid id = reader.GetGuid(0);
+                String name = reader.GetString(1);
+                int Cnt = reader.GetInt32(2);
+                double All_price = reader.GetDouble(3);
+                ProductCell.Content += $"{id} {name} {Cnt} {All_price}\n";
             }
         }
 
