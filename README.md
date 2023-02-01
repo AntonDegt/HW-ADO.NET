@@ -10,3 +10,17 @@
 
 ![image](https://user-images.githubusercontent.com/108671823/215809814-c63cdd36-ff86-4182-9485-09303b04cb21.png)
 <h3 align="center"><a href="https://github.com/AntonDegt/HW-ADO.NET/tree/main/Sales">Папка с проектом</a></h3>
+
+
+
+
+# Домашние задание №2
+<h3>Статистика за день</h3>
+
+- Самый эффективный менеджер [Фамилия, Имя] (по деньгам)
+- Самый эффективный отдел [Название] (по кол-ву проданных товаров)
+- Самый популярный товар [Название] (по кол-ву чеков)
+
+
+![image](https://user-images.githubusercontent.com/108671823/216042470-a0114901-cade-47c0-b5da-6e5441001ed3.png)
+<h3 align="center"><a href="https://github.com/AntonDegt/HW-ADO.NET/tree/main/Sales">Папка с проектом</a></h3>
