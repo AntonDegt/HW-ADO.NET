@@ -37,3 +37,19 @@
 
 ![image](https://user-images.githubusercontent.com/108671823/216074911-41f8dfa2-b787-4247-adf3-7602a215740e.png)
 <h3 align="center"><a href="https://github.com/AntonDegt/HW-ADO.NET/tree/main/Sales">Папка с проектом</a></h3>
+
+
+
+# Домашние задание №4
+<h3>Отсоединенный режим</h3>
+
+- Реализовать MVVM связь для сотрудников (Managers)
+- Использовать ObservableCollection и Binding
+
+
+![image](https://user-images.githubusercontent.com/108671823/218590982-559e8f9f-3519-4760-933c-14d5f81c16b1.png)
+![image](https://user-images.githubusercontent.com/108671823/218591082-e39c74d1-5b5a-4138-83f3-fae4c3588456.png)
+<h3 align="center"><a href="https://github.com/AntonDegt/HW-ADO.NET/tree/main/Sales">Папка с проектом</a></h3>
+
+
+
