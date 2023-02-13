@@ -13,5 +13,6 @@ namespace ADO.NET
     /// </summary>
     public partial class App : Application
     {
+        public const String ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\qultv\source\repos\ADO.NET\ADO.NET\myDataBase.mdf;Integrated Security=True";
     }
 }

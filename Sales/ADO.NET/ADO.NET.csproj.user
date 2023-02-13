@@ -7,6 +7,35 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="ConnectedWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CRUD\DepartmentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CRUD\ManagerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DisconnectedWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="ConnectedWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CRUD\DepartmentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CRUD\ManagerWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DisconnectedWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
