@@ -17,6 +17,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -71,6 +72,7 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
+            <Button Grid.Column="2" Grid.Row="5" Click="ClearSecondry">Сбросить</Button>
             <Label Content="Chief:" Grid.Row="6" Grid.Column="0"
                    FontSize="18"/>
             <ComboBox x:Name="ChiefCombo" 
@@ -87,6 +89,7 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
+            <Button Grid.Column="2" Grid.Row="6" Click="ClearChief">Сбросить</Button>
         </Grid>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">

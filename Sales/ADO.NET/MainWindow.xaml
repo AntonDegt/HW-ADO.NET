@@ -11,10 +11,12 @@
             <RowDefinition Height="120"/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Label VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"  FontSize="52">Connect-Mode </Label>
-        <Button Margin="40 0" FontSize="32" FontStyle="Italic" Height="100" Grid.Row="1" Click="ConnectedButton"> Connected </Button>
-        <Button Margin="40 0" FontSize="32" FontStyle="Italic" Height="100" Grid.Row="2" Click="DisconnectedButton"> Disconnected </Button>
+        <Button Margin="40 0" FontSize="32" FontStyle="Italic" Height="50" Grid.Row="1" Click="ConnectedButton"> Connected </Button>
+        <Button Margin="40 0" FontSize="32" FontStyle="Italic" Height="50" Grid.Row="2" Click="DisconnectedButton"> Disconnected </Button>
+        <Button Margin="40 0" FontSize="32" FontStyle="Italic" Height="50" Grid.Row="3" Click="LINQButton"> LINQ </Button>
     </Grid>
 </Window>

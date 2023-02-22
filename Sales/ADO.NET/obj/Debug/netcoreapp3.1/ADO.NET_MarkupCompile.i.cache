@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\qultv\source\repos\ADO.NET\ADO.NET\App.xaml
-5746123225
+6-17391784
 
-122106795977
+14-828311913
 193-667098205
-ConnectedWindow.xaml;CRUD\DepartmentWindow.xaml;CRUD\ManagerWindow.xaml;DisconnectedWindow.xaml;MainWindow.xaml;
+ConnectedWindow.xaml;CRUD\DepartmentWindow.xaml;CRUD\ManagerWindow.xaml;DisconnectedWindow.xaml;LINQWindow.xaml;MainWindow.xaml;
 
-True
+False
 

@@ -109,6 +109,8 @@
             
             <Label Grid.Column="0" Grid.Row="1" Name="ProductCell" FontSize="12" Padding="4,0,4,0" Content=""/>
         </Grid>
+
+        <Label Grid.Column="1" Grid.Row="1" Content="-"/>
     </Grid>
 
 </Window>

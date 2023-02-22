@@ -68,11 +68,11 @@ namespace ADO.NET
                     using var reader = cmd3.ExecuteReader();
                     while (reader.Read())
                     {
-                        Guid? a = null;
+                        Guid? a = Guid.Empty;
                         if (reader[5] != DBNull.Value)
                             a = reader.GetGuid(5);
 
-                        Guid? b = null;
+                        Guid? b = Guid.Empty;
                         if (reader[6] != DBNull.Value)
                             reader.GetGuid(6);
 

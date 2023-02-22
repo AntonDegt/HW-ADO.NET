@@ -68,17 +68,20 @@ namespace ADO.NET.CRUD
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
-            if (DepartmentsCombo.SelectedValue is Department department)
-            {
-                Guid id = department.Id;
-                MessageBox.Show(
-                    $"{ManagerSurname.Text} - {ManagerName.Text} - {ManagerSecname.Text} - {id}"
-                );
-            }
-            else
-            {
-                MessageBox.Show("Выберите отдел");
-            }
+            if (ManagerSurname.Text.Length > 0)
+                if (ManagerName.Text.Length > 0)
+                    if (ManagerSecname.Text.Length > 0)
+                        if (DepartmentsCombo.SelectedValue is Department department)
+                        {
+                            Guid id = department.Id;
+                            MessageBox.Show(
+                                $"{ManagerSurname.Text} - {ManagerName.Text} - {ManagerSecname.Text} - {id}"
+                            );
+                        }
+                        else MessageBox.Show("Выберите отдел");
+                    else MessageBox.Show("Введите Отчество");
+                else MessageBox.Show("Введите имя");
+            else MessageBox.Show("Введите фамилию");
 
         }
 
@@ -102,14 +105,14 @@ namespace ADO.NET.CRUD
             DialogResult = false;
             Close();
         }
+
+        private void ClearSecondry(object sender, RoutedEventArgs e)
+        {
+            SecondaryCombo.SelectedItem = null;
+        }
+        private void ClearChief(object sender, RoutedEventArgs e)
+        {
+            ChiefCombo.SelectedItem = null;
+        }
     }
 }
-/* Завершить разработку окна CrudManagerWindow
- * - организовать свойство Manager
- * - реализовать его начальную проверку на null (признак создания)
- *    в таком случае генерировать новый идентификатор
- * - иначе (не null) перенести данные из полей Manager в интерфейс
- * - по нажатию кнопки "сохранить" обеспечить проверку необходимых данных
- *    (на пустоту), в случае ошибки выдать предупреждение
- * ** рядом с комбобоксами "совместитель" и "шеф" добавить кнопки "сбросить"   
- */

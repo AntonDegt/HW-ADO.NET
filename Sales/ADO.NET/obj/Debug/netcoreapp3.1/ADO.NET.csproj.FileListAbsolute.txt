@@ -33,3 +33,5 @@ C:\Users\qultv\source\repos\ADO.NET\ADO.NET\obj\Debug\netcoreapp3.1\CRUD\Departm
 C:\Users\qultv\source\repos\ADO.NET\ADO.NET\obj\Debug\netcoreapp3.1\CRUD\DepartmentWindow.baml
 C:\Users\qultv\source\repos\ADO.NET\ADO.NET\obj\Debug\netcoreapp3.1\CRUD\ManagerWindow.g.cs
 C:\Users\qultv\source\repos\ADO.NET\ADO.NET\obj\Debug\netcoreapp3.1\CRUD\ManagerWindow.baml
+C:\Users\qultv\source\repos\ADO.NET\ADO.NET\obj\Debug\netcoreapp3.1\LINQWindow.g.cs
+C:\Users\qultv\source\repos\ADO.NET\ADO.NET\obj\Debug\netcoreapp3.1\LINQWindow.baml

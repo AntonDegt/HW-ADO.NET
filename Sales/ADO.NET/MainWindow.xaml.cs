@@ -35,5 +35,12 @@ namespace ADO.NET
             new DisconnectedWindow().ShowDialog();
             this.Show();
         }
+
+        private void LINQButton(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            new LINQWindow().ShowDialog();
+            this.Show();
+        }
     }
 }
